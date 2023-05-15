@@ -14,6 +14,12 @@ import { IDemoWebpartProps } from "./components/IDemoWebpartProps";
 
 export interface IDemoWebpartWebPartProps {
   description: string;
+  getUserName: string;
+  getUserAge: number;
+  getUserCar: any;
+  isMarried: boolean;
+
+  listName: string;
 }
 
 export default class DemoWebpartWebPart extends BaseClientSideWebPart<IDemoWebpartWebPartProps> {
@@ -28,7 +34,17 @@ export default class DemoWebpartWebPart extends BaseClientSideWebPart<IDemoWebpa
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName,
+        userDisplayName: this.context.pageContext.user.email,
+        siteAbsoluteURL: this.context.pageContext.web.absoluteUrl,
+
+        siteTitle: this.context.pageContext.web.title,
+        // Pane
+        getUserName: this.properties.getUserName,
+        getUserAge: this.properties.getUserAge,
+        getUserCar: this.properties.getUserCar,
+        isMarried: this.properties.isMarried,
+        listName: this.properties.listName,
+        context: this.context,
       }
     );
 

@@ -1,0 +1,372 @@
+{
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "total_pages": {
+      "type": "integer"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "promoted_at": {
+            "type": ["string", "null"]
+          },
+          "width": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "color": {
+            "type": "string"
+          },
+          "blur_hash": {
+            "type": "string"
+          },
+          "description": {
+            "type": ["string", "null"]
+          },
+          "alt_description": {
+            "type": "string"
+          },
+          "urls": {
+            "type": "object",
+            "properties": {
+              "raw": {
+                "type": "string"
+              },
+              "full": {
+                "type": "string"
+              },
+              "regular": {
+                "type": "string"
+              },
+              "small": {
+                "type": "string"
+              },
+              "thumb": {
+                "type": "string"
+              },
+              "small_s3": {
+                "type": "string"
+              }
+            }
+          },
+          "links": {
+            "type": "object",
+            "properties": {
+              "self": {
+                "type": "string"
+              },
+              "html": {
+                "type": "string"
+              },
+              "download": {
+                "type": "string"
+              },
+              "download_location": {
+                "type": "string"
+              }
+            }
+          },
+          "likes": {
+            "type": "integer"
+          },
+          "liked_by_user": {
+            "type": "boolean"
+          },
+          "current_user_collections": {
+            "type": "array"
+          },
+          "sponsorship": {
+            "type": ["object", "null"],
+            "properties": {
+              "impression_urls": {
+                "type": "array"
+              },
+              "tagline": {
+                "type": "string"
+              },
+              "tagline_url": {
+                "type": "string"
+              },
+              "sponsor": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": ["string", "null"]
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "first_name": {
+                    "type": "string"
+                  },
+                  "last_name": {
+                    "type": ["string", "null"]
+                  },
+                  "twitter_username": {
+                    "type": ["string", "null"]
+                  },
+                  "portfolio_url": {
+                    "type": ["string", "null"]
+                  },
+                  "bio": {
+                    "type": ["string", "null"]
+                  },
+                  "location": {
+                    "type": ["string", "null"]
+                  },
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "self": {
+                        "type": "string"
+                      },
+                      "html": {
+                        "type": "string"
+                      },
+                      "photos": {
+                        "type": "string"
+                      },
+                      "likes": {
+                        "type": "string"
+                      },
+                      "portfolio": {
+                        "type": "string"
+                      },
+                      "following": {
+                        "type": "string"
+                      },
+                      "followers": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "profile_image": {
+                    "type": "object",
+                    "properties": {
+                      "small": {
+                        "type": "string"
+                      },
+                      "medium": {
+                        "type": "string"
+                      },
+                      "large": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "instagram_username": {
+                    "type": ["string", "null"]
+                  },
+                  "total_collections": {
+                    "type": "integer"
+                  },
+                  "total_likes": {
+                    "type": "integer"
+                  },
+                  "total_photos": {
+                    "type": "integer"
+                  },
+                  "accepted_tos": {
+                    "type": "boolean"
+                  },
+                  "for_hire": {
+                    "type": "boolean"
+                  },
+                  "social": {
+                    "type": "object",
+                    "properties": {
+                      "instagram_username": {
+                        "type": ["string", "null"]
+                      },
+                      "portfolio_url": {
+                        "type": ["string", "null"]
+                      },
+                      "twitter_username": {
+                        "type": ["string", "null"]
+                      },
+                      "paypal_email": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "topic_submissions": {
+            "type": "object",
+            "properties": {}
+          },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": ["string", "null"]
+              },
+              "twitter_username": {
+                "type": ["string", "null"]
+              },
+              "portfolio_url": {
+                "type": ["string", "null"]
+              },
+              "bio": {
+                "type": ["string", "null"]
+              },
+              "location": {
+                "type": ["string", "null"]
+              },
+              "links": {
+                "type": "object",
+                "properties": {
+                  "self": {
+                    "type": "string"
+                  },
+                  "html": {
+                    "type": "string"
+                  },
+                  "photos": {
+                    "type": "string"
+                  },
+                  "likes": {
+                    "type": "string"
+                  },
+                  "portfolio": {
+                    "type": "string"
+                  },
+                  "following": {
+                    "type": "string"
+                  },
+                  "followers": {
+                    "type": "string"
+                  }
+                }
+              },
+              "profile_image": {
+                "type": "object",
+                "properties": {
+                  "small": {
+                    "type": "string"
+                  },
+                  "medium": {
+                    "type": "string"
+                  },
+                  "large": {
+                    "type": "string"
+                  }
+                }
+              },
+              "instagram_username": {
+                "type": ["string", "null"]
+              },
+              "total_collections": {
+                "type": "integer"
+              },
+              "total_likes": {
+                "type": "integer"
+              },
+              "total_photos": {
+                "type": "integer"
+              },
+              "accepted_tos": {
+                "type": "boolean"
+              },
+              "for_hire": {
+                "type": "boolean"
+              },
+              "social": {
+                "type": "object",
+                "properties": {
+                  "instagram_username": {
+                    "type": ["string", "null"]
+                  },
+                  "portfolio_url": {
+                    "type": ["string", "null"]
+                  },
+                  "twitter_username": {
+                    "type": ["string", "null"]
+                  },
+                  "paypal_email": {}
+                }
+              }
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": ["type", "title"]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "slug",
+          "created_at",
+          "updated_at",
+          "promoted_at",
+          "width",
+          "height",
+          "color",
+          "blur_hash",
+          "description",
+          "alt_description",
+          "urls",
+          "links",
+          "likes",
+          "liked_by_user",
+          "current_user_collections",
+          "sponsorship",
+          "topic_submissions",
+          "user",
+          "tags"
+        ]
+      }
+    }
+  }
+}
