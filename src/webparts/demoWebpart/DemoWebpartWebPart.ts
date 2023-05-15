@@ -123,20 +123,22 @@ export default class DemoWebpartWebPart extends BaseClientSideWebPart<IDemoWebpa
   protected get dataVersion(): Version {
     return Version.parse("1.0");
   }
-
+  protected get disableReactivePropertyChanges(): boolean {
+    return true;
+  }
+  protected onAfterPropertyPaneChangesApplied(): any {
+    ReactDom.unmountComponentAtNode(this.domElement);
+    this.render();
+  }
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
         {
-          header: {
-            description: strings.PropertyPaneDescription,
-          },
           groups: [
             {
-              groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField("description", {
-                  label: strings.DescriptionFieldLabel,
+                PropertyPaneTextField("listName", {
+                  label: "Enter list name",
                 }),
               ],
             },
