@@ -61,17 +61,34 @@ export default class DemoWebpart extends React.Component<
     return (
       <div className={styles["test-spfx"]}>
         <h1>Employee Information</h1>
+        {/* Table view */}
+        <div style={{ display: this.props.viewType ? "none" : "" }}>
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Tech</th>
+            </tr>
+            {this.state.AllEmployees.map((emp) => {
+              return (
+                <tr>
+                  <td>{emp.ID}</td>
+                  <td>{emp.Title}</td>
+                  <td>{emp.Address}</td>
+                  <td>{emp.Technology}</td>
+                </tr>
+              );
+            })}
+          </table>
+        </div>
 
-        <div className={styles["card-container"]}>
+        {/* Card View */}
+        <div
+          className={styles["card-container"]}
+          style={{ display: this.props.viewType ? "" : "none" }}
+        >
           {this.state.AllEmployees.map((emp) => {
-            // Using Javascript
-            // const date = new Date(emp.BirthDate);
-            // const formattedDate = date.toLocaleDateString("en-US", {
-            //   year: "numeric",
-            //   month: "short",
-            //   day: "numeric",
-            // });
-
             return (
               <div className={styles["card-div"]}>
                 <p>{emp.ID}</p>

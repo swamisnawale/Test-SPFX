@@ -20,4 +20,5 @@ export interface IDemoWebpartProps {
   //
   listName: string;
   context: WebPartContext;
+  viewType: boolean;
 }

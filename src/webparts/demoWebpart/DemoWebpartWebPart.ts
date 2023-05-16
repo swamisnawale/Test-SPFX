@@ -4,6 +4,7 @@ import { Version } from "@microsoft/sp-core-library";
 import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
+  PropertyPaneToggle,
 } from "@microsoft/sp-property-pane";
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { IReadonlyTheme } from "@microsoft/sp-component-base";
@@ -20,6 +21,7 @@ export interface IDemoWebpartWebPartProps {
   isMarried: boolean;
 
   listName: string;
+  viewType: boolean;
 }
 
 export default class DemoWebpartWebPart extends BaseClientSideWebPart<IDemoWebpartWebPartProps> {
@@ -45,6 +47,7 @@ export default class DemoWebpartWebPart extends BaseClientSideWebPart<IDemoWebpa
         isMarried: this.properties.isMarried,
         listName: this.properties.listName,
         context: this.context,
+        viewType: this.properties.viewType,
       }
     );
 
@@ -139,6 +142,11 @@ export default class DemoWebpartWebPart extends BaseClientSideWebPart<IDemoWebpa
               groupFields: [
                 PropertyPaneTextField("listName", {
                   label: "Enter list name",
+                }),
+                PropertyPaneToggle("viewType", {
+                  label: "View type",
+                  onText: "Card view",
+                  offText: "Table view",
                 }),
               ],
             },

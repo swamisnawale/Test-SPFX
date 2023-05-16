@@ -12,16 +12,18 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "@microsoft/sp-core-library": "1.16.1",
-    "@microsoft/sp-lodash-subset": "1.16.1",
-    "@microsoft/sp-office-ui-fabric-core": "1.16.1",
-    "@microsoft/sp-property-pane": "1.16.1",
-    "@microsoft/sp-webpart-base": "1.16.1",
+    "@microsoft/sp-core-library": "1.17.2",
+    "@microsoft/sp-lodash-subset": "1.17.2",
+    "@microsoft/sp-office-ui-fabric-core": "1.17.2",
+    "@microsoft/sp-property-pane": "1.17.2",
+    "@microsoft/sp-webpart-base": "1.17.2",
     "moment": "^2.29.4",
     "office-ui-fabric-react": "^7.199.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "tslib": "2.3.1"
+    "tslib": "2.3.1",
+    "@fluentui/react": "^7.199.1",
+    "@microsoft/sp-component-base": "1.17.2"
   },
   "devDependencies": {
     "@microsoft/rush-stack-compiler-4.5": "0.2.2",
@@ -36,6 +38,7 @@
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
     "eslint-plugin-react-hooks": "4.3.0",
-    "@microsoft/sp-module-interfaces": "1.16.1"
+    "@microsoft/sp-module-interfaces": "1.17.2",
+    "@fluentui/react": "^7.199.1"
   }
 }
